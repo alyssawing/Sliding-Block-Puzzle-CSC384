@@ -25,12 +25,22 @@ where the 1's represent a part of the goal piece, the <> and ^v arrows represent
 
 This board is an example starting configuration; this is the most classic configuration of Hua Rong Dao.
 
+## How to Use
+
 The pieces can be moved so long as they are not rotated and there are no other pieces in the way. Upon running either
 A* or DFS, the step-by-step solutions to the goal state will be written into the output file.
 * hrd.py is the python file to run, containing all of the A* and DFS algorithms and helper functions.
 * test_hrd.txt is a sample input file containing the initial (given) state of the board. 
 * astar_sol.txt contains the step-by-step optimal solution to the goal state.
 * dfs_sol.txt contains the dfs solution to the goal state, which is not guaranteed to be optimal.
+
+To run using the given files, ensure that they are in the same folder. Input the desired initial board state into 
+test_hrd.txt, ensuring that there are the correct number of pieces in the correct format. In terminal, run either the A* or the DFS algorithm:
+
+    python3 hrd.py --inputfile test_hrd.txt --algo astar --outputfile astar_sol.txt
+    python3 hrd.py --inputfile test_hrd.txt --algo dfs --outputfile dfs_sol.txt
+
+The solution steps will be written to the output file.
 
 ### Notes
 This was a project for CSC384, Introduction to Artifical Intelligence (Winter 2023).
